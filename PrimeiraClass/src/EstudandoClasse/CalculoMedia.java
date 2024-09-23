@@ -27,7 +27,7 @@ public class CalculoMedia {
             JOptionPane.showMessageDialog(null, "Você esta em recuperação: " + somaMedia);
 
         } else {
-            JOptionPane.showMessageDialog(null, "Você foi reprovdo: " + somaMedia);
+            JOptionPane.showMessageDialog(null, "Você foi reprovado: " + somaMedia);
 
         }
 
