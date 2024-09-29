@@ -1,4 +1,11 @@
-package EstudandoPoo.ProjetoAluno.Base;
+package EstudandoPoo.ProjetoAluno;
+
+import javax.swing.JOptionPane;
+import EstudandoPoo.ProjetoAluno.Base.Aluno;
+import EstudandoPoo.ProjetoAluno.Base.Disciplina;
+import java.util.ArrayList;
+import java.util.List;
+import EstudandoPoo.ProjetoAluno.Base.Disciplina;
 
 public class Aluno {
 
@@ -12,11 +19,18 @@ public class Aluno {
   private String dataMatricula;
   private String nomeEscola;
   private String serieMatriculada;
-  private double nota1;
-  private double nota2;
-  private double nota3;
-  private double nota4;
-  private double mediaNota = (nota1 + nota2 + nota3 + nota4 / 4);
+
+  private List<Disciplina> disciplinas  = new ArrayList<Disciplina>();
+
+  public List<Disciplina> getDisciplinas() {
+    return disciplinas;
+  }
+
+  public void setDisciplinas(List<Disciplina> disciplinas) {
+    this.disciplinas = disciplinas;
+  }
+
+
 
   public void setNome(String nome) { // SETE é para adicionar ou receber dados para os atributos
     this.nome = nome;
@@ -99,40 +113,17 @@ public class Aluno {
     this.serieMatriculada = serieMatriculada;
   }
 
-  public double getNota1() {
-    return nota1;
-  }
-
-  public void setNota1(double nota1) {
-    this.nota1 = nota1;
-  }
-
-  public double getNota2() {
-    return nota2;
-  }
-
-  public void setNota2(double nota2) {
-    this.nota2 = nota2;
-  }
-
-  public double getNota3() {
-    return nota3;
-  }
-
-  public void setNota3(double nota3) {
-    this.nota3 = nota3;
-  }
-
-  public double getNota4() {
-    return nota4;
-  }
-
-  public void setNota4(double nota4) {
-    this.nota4 = nota4;
-  }
 
   public double getMediaNota() { // METODO que calcula a nota do aluno
-    return (nota1 + nota2 + nota3 + nota4) / 4;
+
+    double somaNota = 0.0;
+    
+    for(Disciplina disciplina : disciplinas){
+
+      somaNota += disciplina.getNota();
+    }
+
+    return somaNota / disciplinas.size();//VARRER quantos objetos autõmaticos
 
   }
 
@@ -152,7 +143,25 @@ public class Aluno {
 
   }
 
-  
+  @Override
+  public String toString() {
+    return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
+        + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+        + ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculada=" + ", getNome()="
+        + getNome() + ", getIdade()=" + getIdade()
+        + ", getDataNascimento()=" + getDataNascimento() + ", getRegistroGeral()=" + getRegistroGeral()
+        + ", getNumeroCpf()=" + getNumeroCpf() + ", getNomeMae()=" + getNomeMae() + ", getNomePai()=" + getNomePai()
+        + ", getClass()=" + getClass() + ", getDataMatricula()=" + getDataMatricula() + ", getNomeEscola()="
+        + getNomeEscola() + ", getSerieMatriculada()=" + getSerieMatriculada() + ", getDisciplina()="
+        + ", getMediaNota()=" + getMediaNota() + ", getResultadoFinal()=" + getResultadoFinal() + ", hashCode()="
+        + hashCode() + ", toString()=" + super.toString() + "]";
+  }
 
-  
+  public char[] materias() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'materias'");
+  }
+
+ 
+
 }

@@ -1,8 +1,11 @@
-package EstudandoPoo.ProjetoAluno.Test;
+package EstudandoPoo.ProjetoAluno;
 
 import javax.swing.JOptionPane;
-
 import EstudandoPoo.ProjetoAluno.Base.Aluno;
+import EstudandoPoo.ProjetoAluno.Base.Disciplina;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class AlunoTest {
     public static void main(String[] args) {
@@ -22,35 +25,52 @@ public class AlunoTest {
         String nota3 = JOptionPane.showInputDialog("Digite a terceira nota");
         String nota4 = JOptionPane.showInputDialog("Digite a quarta nota");
 
-        Aluno aluno = new Aluno();
+        Aluno aluno1 = new Aluno();
 
-        aluno.setNome(nome);
-        aluno.setIdade(Integer.valueOf(idade));
-        aluno.setDataNascimento(dataNascimento);
-        aluno.setRegistroGeral(registroGeral);
-        aluno.setNumeroCpf(numeroCpf);
-        aluno.setNomeMae(nomeMae);
-        aluno.setNomePai(nomePai);
-        aluno.setDataMatricula(dataMatricula);
-        aluno.setNomeEscola(nomeEscola);
-        aluno.setSerieMatriculada(serieMatriculada);
-        aluno.setNota1(Integer.valueOf(90));
-        aluno.setNota2(Integer.valueOf(90));
-        aluno.setNota3(Integer.valueOf(90));
-        aluno.setNota4(Integer.valueOf(90));
+        aluno1.setNome(nome);
+        aluno1.setIdade(Integer.valueOf(idade));
+        aluno1.setDataNascimento(dataNascimento);
+        aluno1.setRegistroGeral(registroGeral);
+        aluno1.setNumeroCpf(numeroCpf);
+        aluno1.setNomeMae(nomeMae);
+        aluno1.setNomePai(nomePai);
+        aluno1.setDataMatricula(dataMatricula);
+        aluno1.setNomeEscola(nomeEscola);
+        aluno1.setSerieMatriculada(serieMatriculada);
 
-        System.out.println("Meu nome e: " + aluno.getNome());
-        System.out.println("Minha idade e: " + aluno.getIdade());
-        System.out.println("Minha data de nascimento e: " + aluno.getDataNascimento());
-        System.out.println("Meu registro geral e: " + aluno.getRegistroGeral());
-        System.out.println("Meu CPF e: " + aluno.getNumeroCpf());
-        System.out.println("O nome da minha mãe e: " + aluno.getNomeMae());
-        System.out.println("O nome do meu pai e: " + aluno.getNomePai());
-        System.out.println("minha matricula foi em: " + aluno.getDataMatricula());
-        System.out.println("O nome da escola  e: " + aluno.getNomeEscola());
-        System.out.println("Estou matriculado em um curso de nível: " + aluno.getSerieMatriculada());
-        System.out.println("A media de sua nota foi: " + aluno.getMediaNota());
-        System.out.println(" Resultado: " + aluno.getResultadoFinal());
+        Disciplina disciplina1 = new Disciplina();
+        disciplina1.setDisciplina("Banco de Dados");
+        disciplina1.setNota(90);
+
+        Disciplina disciplina2 = new Disciplina();
+        disciplina2.setDisciplina("Matemática");
+        disciplina2.setNota(80);
+
+        Disciplina disciplina3 = new Disciplina();
+        disciplina3.setDisciplina("Geografia");
+        disciplina3.setNota(97);
+
+        Disciplina disciplina4 = new Disciplina();
+        disciplina4.setDisciplina("Java Web");
+        disciplina4.setNota(70);
+
+        aluno1.getDisciplinas().add(disciplina1);
+        aluno1.getDisciplinas().add(disciplina2);
+        aluno1.getDisciplinas().add(disciplina3);
+        aluno1.getDisciplinas().add(disciplina4);
+
+        System.out.println("Meu nome e: " + aluno1.getNome());
+        System.out.println("Minha idade e: " + aluno1.getIdade());
+        System.out.println("Minha data de nascimento e: " + aluno1.getDataNascimento());
+        System.out.println("Meu registro geral e: " + aluno1.getRegistroGeral());
+        System.out.println("Meu CPF e: " + aluno1.getNumeroCpf());
+        System.out.println("O nome da minha mãe e: " + aluno1.getNomeMae());
+        System.out.println("O nome do meu pai e: " + aluno1.getNomePai());
+        System.out.println("minha matricula foi em: " + aluno1.getDataMatricula());
+        System.out.println("O nome da escola  e: " + aluno1.getNomeEscola());
+        System.out.println("Estou matriculado em um curso de nível: " + aluno1.getSerieMatriculada());
+        System.out.println("A media de sua nota foi: " + aluno1.getMediaNota());
+        System.out.println(" Resultado: " + aluno1.getResultadoFinal());
 
     }
 
