@@ -6,7 +6,6 @@ import EstudandoPoo.ProjetoAluno.Base.Disciplina;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class AlunoTest {
     public static void main(String[] args) {
 
@@ -20,7 +19,7 @@ public class AlunoTest {
         String dataMatricula = JOptionPane.showInputDialog("Digite a data de sua matricula");
         String nomeEscola = JOptionPane.showInputDialog("Qual o nome de sua escola");
         String serieMatriculada = JOptionPane.showInputDialog("Qual a serie matriculada");
-       
+
         Aluno aluno1 = new Aluno();
 
         aluno1.setNome(nome);
@@ -34,26 +33,23 @@ public class AlunoTest {
         aluno1.setNomeEscola(nomeEscola);
         aluno1.setSerieMatriculada(serieMatriculada);
 
-        Disciplina disciplina1 = new Disciplina();
-        disciplina1.setDisciplina("Banco de Dados");
-        disciplina1.setNota(90);
+        for (int pos = 1; pos <= 4; pos++) {
+            String nomeDisciplina = JOptionPane.showInputDialog("Qual o nome da disciplina " + pos + " ?");
+            String notaDisciplina = JOptionPane.showInputDialog("Qual foi a nota desta disciplina " + pos + "?");
+            Disciplina disciplina = new Disciplina();
+            disciplina.setNota(Double.valueOf(notaDisciplina));
 
-        Disciplina disciplina2 = new Disciplina();
-        disciplina2.setDisciplina("Matemática");
-        disciplina2.setNota(80);
+            aluno1.getDisciplinas().add(disciplina);
 
-        Disciplina disciplina3 = new Disciplina();
-        disciplina3.setDisciplina("Geografia");
-        disciplina3.setNota(97);
+        }
 
-        Disciplina disciplina4 = new Disciplina();
-        disciplina4.setDisciplina("Java Web");
-        disciplina4.setNota(70);
+        int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+        if (escolha == 0) {
+            String disciplinaRemover = JOptionPane
+                    .showInputDialog("Qual a disciplina deseja remover ?  [1] [2] [3] ou [4]");
+            aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() -1);
 
-        aluno1.getDisciplinas().add(disciplina1);
-        aluno1.getDisciplinas().add(disciplina2);
-        aluno1.getDisciplinas().add(disciplina3);
-        aluno1.getDisciplinas().add(disciplina4);
+        }
 
         System.out.println("Meu nome e: " + aluno1.getNome());
         System.out.println("Minha idade e: " + aluno1.getIdade());
