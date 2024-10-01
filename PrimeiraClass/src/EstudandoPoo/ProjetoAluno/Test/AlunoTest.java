@@ -20,11 +20,7 @@ public class AlunoTest {
         String dataMatricula = JOptionPane.showInputDialog("Digite a data de sua matricula");
         String nomeEscola = JOptionPane.showInputDialog("Qual o nome de sua escola");
         String serieMatriculada = JOptionPane.showInputDialog("Qual a serie matriculada");
-        String nota1 = JOptionPane.showInputDialog("Digite a primeira nota");
-        String nota2 = JOptionPane.showInputDialog("Digite a segunda nota");
-        String nota3 = JOptionPane.showInputDialog("Digite a terceira nota");
-        String nota4 = JOptionPane.showInputDialog("Digite a quarta nota");
-
+       
         Aluno aluno1 = new Aluno();
 
         aluno1.setNome(nome);
@@ -71,6 +67,7 @@ public class AlunoTest {
         System.out.println("Estou matriculado em um curso de nível: " + aluno1.getSerieMatriculada());
         System.out.println("A media de sua nota foi: " + aluno1.getMediaNota());
         System.out.println(" Resultado: " + aluno1.getResultadoFinal());
+        
 
     }
 
