@@ -20,7 +20,7 @@ public class Aluno {
   private String nomeEscola;
   private String serieMatriculada;
 
-  private List<Disciplina> disciplinas  = new ArrayList<Disciplina>();
+  private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
   public List<Disciplina> getDisciplinas() {
     return disciplinas;
@@ -29,8 +29,6 @@ public class Aluno {
   public void setDisciplinas(List<Disciplina> disciplinas) {
     this.disciplinas = disciplinas;
   }
-
-
 
   public void setNome(String nome) { // SETE é para adicionar ou receber dados para os atributos
     this.nome = nome;
@@ -113,34 +111,33 @@ public class Aluno {
     this.serieMatriculada = serieMatriculada;
   }
 
-
   public double getMediaNota() { // METODO que calcula a nota do aluno
 
     double somaNota = 0.0;
-    
-    for(Disciplina disciplina : disciplinas){
+
+    for (Disciplina disciplina : disciplinas) {
 
       somaNota += disciplina.getNota();
     }
 
-    return somaNota / disciplinas.size();//VARRER quantos objetos autõmaticos
+    return somaNota / disciplinas.size();// VARRER quantos objetos autõmaticos
 
   }
 
   public String getResultadoFinal() {
     double media = this.getMediaNota();
 
-    if (media >= 60) {
-      return "Aluno aprovado ";
+    if (media >= 40) {
+      if (media >= 60) {
+        return "Aluno aprovado ";
 
-    }
-    if (media <= 40) {
-      return "Aluno em recuperação ";
-
+      } else {
+        return "Aluno em recuperação ";
+      }
     } else {
-      return "Aluno reprovado ";
-    }
 
+      return "Aluno reprovado";
+    }
   }
 
   @Override
@@ -161,7 +158,5 @@ public class Aluno {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'materias'");
   }
-
- 
 
 }

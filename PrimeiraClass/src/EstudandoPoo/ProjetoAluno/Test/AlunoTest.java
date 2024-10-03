@@ -47,23 +47,12 @@ public class AlunoTest {
         if (escolha == 0) {
             String disciplinaRemover = JOptionPane
                     .showInputDialog("Qual a disciplina deseja remover ?  [1] [2] [3] ou [4]");
-            aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() -1);
+            aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
 
         }
-
-        System.out.println("Meu nome e: " + aluno1.getNome());
-        System.out.println("Minha idade e: " + aluno1.getIdade());
-        System.out.println("Minha data de nascimento e: " + aluno1.getDataNascimento());
-        System.out.println("Meu registro geral e: " + aluno1.getRegistroGeral());
-        System.out.println("Meu CPF e: " + aluno1.getNumeroCpf());
-        System.out.println("O nome da minha mãe e: " + aluno1.getNomeMae());
-        System.out.println("O nome do meu pai e: " + aluno1.getNomePai());
-        System.out.println("minha matricula foi em: " + aluno1.getDataMatricula());
-        System.out.println("O nome da escola  e: " + aluno1.getNomeEscola());
-        System.out.println("Estou matriculado em um curso de nível: " + aluno1.getSerieMatriculada());
+        System.out.println(aluno1);//Descrição do objeto na memoria
         System.out.println("A media de sua nota foi: " + aluno1.getMediaNota());
         System.out.println(" Resultado: " + aluno1.getResultadoFinal());
-        
 
     }
 
