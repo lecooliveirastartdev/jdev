@@ -1,11 +1,12 @@
-package EstudandoPoo.ProjetoAluno;
+package EstudandoPoo.ProjetoAluno.Base;
 
 import javax.swing.JOptionPane;
 import EstudandoPoo.ProjetoAluno.Base.Aluno;
 import EstudandoPoo.ProjetoAluno.Base.Disciplina;
+import EstudandoPoo.ProjetoAluno.Constantes.StatusAluno;
+
 import java.util.ArrayList;
 import java.util.List;
-import EstudandoPoo.ProjetoAluno.Base.Disciplina;
 
 public class Aluno {
 
@@ -129,14 +130,14 @@ public class Aluno {
 
     if (media >= 40) {
       if (media >= 60) {
-        return "Aluno aprovado ";
+        return StatusAluno.APROVADO;
 
       } else {
-        return "Aluno em recuperação ";
+        return StatusAluno.RECUPERACAO;
       }
     } else {
 
-      return "Aluno reprovado";
+      return StatusAluno.REPROVADO;
     }
   }
 

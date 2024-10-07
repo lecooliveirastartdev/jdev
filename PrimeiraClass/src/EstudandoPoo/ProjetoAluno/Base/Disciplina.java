@@ -1,11 +1,11 @@
-package EstudandoPoo.ProjetoAluno;
+package EstudandoPoo.ProjetoAluno.Base;
 
 import javax.swing.JOptionPane;
 import EstudandoPoo.ProjetoAluno.Base.Aluno;
 import EstudandoPoo.ProjetoAluno.Base.Disciplina;
 import java.util.ArrayList;
 import java.util.List;
-import EstudandoPoo.ProjetoAluno.Base.Disciplina;
+import EstudandoPoo.ProjetoAluno.Constantes.*;;
 
 
 public class Disciplina {
