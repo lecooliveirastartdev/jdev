@@ -3,13 +3,23 @@ package EstudandoPoo.ProjetoAluno.Test;
 import javax.swing.JOptionPane;
 import EstudandoPoo.ProjetoAluno.Base.Aluno;
 import EstudandoPoo.ProjetoAluno.Base.Disciplina;
+import EstudandoPoo.ProjetoAluno.Constantes.StatusAluno;
+
+import java.io.ObjectInputFilter.Status;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class AlunoTest {
     public static void main(String[] args) {
 
         List<Aluno> alunos = new ArrayList<Aluno>();
+
+        HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>(); /*
+                                                                                 * HashMap é uma lista que dentro dela
+                                                                                 * temos uma chave que indentifica uma
+                                                                                 * sequencia de valores.
+                                                                                 */
 
         for (int quantidade = 1; quantidade <= 5; quantidade++) {
 
@@ -37,7 +47,7 @@ public class AlunoTest {
             aluno1.setNomeEscola(nomeEscola);
             aluno1.setSerieMatriculada(serieMatriculada);
 
-            for (int pos = 1; pos <= 4; pos++) {
+            for (int pos = 1; pos <= 1; pos++) {
 
                 String nomeDisciplina = JOptionPane.showInputDialog("Qual o nome da disciplina " + pos + " ?");
                 String notaDisciplina = JOptionPane.showInputDialog("Qual foi a nota desta disciplina " + pos + "?");
@@ -72,7 +82,24 @@ public class AlunoTest {
             alunos.add(aluno1);
         }
 
-       for (Aluno aluno : alunos
+        maps.put(StatusAluno.APROVADO, new ArrayList<Aluno>());
+        maps.put(StatusAluno.REPROVADO, new ArrayList<Aluno>());
+        maps.put(StatusAluno.RECUPERACAO, new ArrayList<Aluno>());
+
+        for (Aluno aluno : alunos) {
+
+            if (aluno.getResultadoFinal().equalsIgnoreCase(StatusAluno.APROVADO)) {
+                maps.get(StatusAluno.APROVADO).add(aluno);
+
+            } else if (aluno.getResultadoFinal().equalsIgnoreCase(StatusAluno.RECUPERACAO)) {
+
+                maps.get(StatusAluno.RECUPERACAO).add(aluno);
+
+            } else {
+                maps.get(StatusAluno.REPROVADO).add(aluno);
+            }
+
+        }
 
     }
 
