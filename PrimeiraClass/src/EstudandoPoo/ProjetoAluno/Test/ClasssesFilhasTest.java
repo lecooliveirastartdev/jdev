@@ -5,7 +5,7 @@ import EstudandoPoo.ProjetoAluno.Base.Diretor;
 import EstudandoPoo.ProjetoAluno.Base.Pessoa;
 import EstudandoPoo.ProjetoAluno.Base.Secretario;
 
-public class ClasssesFilhasTest   {
+public class ClasssesFilhasTest  {
     public static void main(String[] args) {
 
         Aluno aluno = new Aluno();
@@ -44,8 +44,6 @@ public class ClasssesFilhasTest   {
        
 
     }
-
-    
 
 
 }
