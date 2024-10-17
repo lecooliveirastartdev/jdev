@@ -5,18 +5,15 @@ import EstudandoPoo.ProjetoAluno.Base.Aluno;
 import EstudandoPoo.ProjetoAluno.Base.Disciplina;
 import EstudandoPoo.ProjetoAluno.Constantes.StatusAluno;
 
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 
-  private String nome;
-  private int idade;
-  private String dataNascimento;
-  private String registroGeral;
-  private String numeroCpf;
-  private String nomeMae;
-  private String nomePai;
+  
+
   private String dataMatricula;
   private String nomeEscola;
   private String serieMatriculada;
@@ -31,62 +28,7 @@ public class Aluno {
     this.disciplinas = disciplinas;
   }
 
-  public void setNome(String nome) { // SETE é para adicionar ou receber dados para os atributos
-    this.nome = nome;
-  }
-
-  public String getNome() { // GET é para resgatar ou obter o vaçor do atribruto
-    return nome;
-  }
-
-  public void setIdade(int idade) {
-    this.idade = idade;
-
-  }
-
-  public int getIdade() {
-    return idade;
-  }
-
-  public String getDataNascimento() {
-    return dataNascimento;
-  }
-
-  public void setDataNascimento(String dataNascimento) {
-    this.dataNascimento = dataNascimento;
-  }
-
-  public String getRegistroGeral() {
-    return registroGeral;
-  }
-
-  public void setRegistroGeral(String registroGeral) {
-    this.registroGeral = registroGeral;
-  }
-
-  public String getNumeroCpf() {
-    return numeroCpf;
-  }
-
-  public void setNumeroCpf(String numeroCpf) {
-    this.numeroCpf = numeroCpf;
-  }
-
-  public String getNomeMae() {
-    return nomeMae;
-  }
-
-  public void setNomeMae(String nomeMae) {
-    this.nomeMae = nomeMae;
-  }
-
-  public String getNomePai() {
-    return nomePai;
-  }
-
-  public void setNomePai(String nomePai) {
-    this.nomePai = nomePai;
-  }
+ 
 
   public String getDataMatricula() {
     return dataMatricula;
@@ -141,23 +83,43 @@ public class Aluno {
     }
   }
 
+  
+
   @Override
   public String toString() {
     return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
-        + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
-        + ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculada=" + ", getNome()="
-        + getNome() + ", getIdade()=" + getIdade()
-        + ", getDataNascimento()=" + getDataNascimento() + ", getRegistroGeral()=" + getRegistroGeral()
-        + ", getNumeroCpf()=" + getNumeroCpf() + ", getNomeMae()=" + getNomeMae() + ", getNomePai()=" + getNomePai()
-        + ", getClass()=" + getClass() + ", getDataMatricula()=" + getDataMatricula() + ", getNomeEscola()="
-        + getNomeEscola() + ", getSerieMatriculada()=" + getSerieMatriculada() + ", getDisciplina()="
-        + ", getMediaNota()=" + getMediaNota() + ", getResultadoFinal()=" + getResultadoFinal() + ", hashCode()="
-        + hashCode() + ", toString()=" + super.toString() + "]";
+        + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", dataMatricula=" + dataMatricula
+        + ", nomePai=" + nomePai + ", nomeEscola=" + nomeEscola + ", serieMatriculada=" + serieMatriculada
+        + ", disciplinas=" + disciplinas + ", getNome()=" + getNome() + ", getIdade()=" + getIdade()
+        + ", getDisciplinas()=" + getDisciplinas() + ", getDataNascimento()=" + getDataNascimento()
+        + ", getDataMatricula()=" + getDataMatricula() + ", getRegistroGeral()=" + getRegistroGeral()
+        + ", getNomeEscola()=" + getNomeEscola() + ", getSerieMatriculada()=" + getSerieMatriculada()
+        + ", getNumeroCpf()=" + getNumeroCpf() + ", getNomeMae()=" + getNomeMae() + ", getMediaNota()=" + getMediaNota()
+        + ", getNomePai()=" + getNomePai() + ", getClass()=" + getClass() + ", getResultadoFinal()="
+        + getResultadoFinal() + ", pessoaMaiorIdade()=" + pessoaMaiorIdade() + ", materias()="
+        + Arrays.toString(materias()) + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+  }
+
+  @Override
+  public boolean pessoaMaiorIdade() {
+
+    return idade >= 21;
   }
 
   public char[] materias() {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'materias'");
+  }
+
+  public void setIdade(Integer valueOf) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'setIdade'");
+  }
+
+  @Override
+  public double salario() {
+    // TODO Auto-generated method stub
+    return 1500.90;
   }
 
 }
