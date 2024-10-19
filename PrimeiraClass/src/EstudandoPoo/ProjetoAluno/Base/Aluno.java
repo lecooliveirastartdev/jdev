@@ -84,19 +84,21 @@ public class Aluno extends Pessoa {
 
   
 
+  
+
   @Override
   public String toString() {
     return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
-        + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", dataMatricula=" + dataMatricula
-        + ", nomePai=" + nomePai + ", nomeEscola=" + nomeEscola + ", serieMatriculada=" + serieMatriculada
+        + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+        + ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculada=" + serieMatriculada
         + ", disciplinas=" + disciplinas + ", getNome()=" + getNome() + ", getIdade()=" + getIdade()
         + ", getDisciplinas()=" + getDisciplinas() + ", getDataNascimento()=" + getDataNascimento()
         + ", getDataMatricula()=" + getDataMatricula() + ", getRegistroGeral()=" + getRegistroGeral()
-        + ", getNomeEscola()=" + getNomeEscola() + ", getSerieMatriculada()=" + getSerieMatriculada()
-        + ", getNumeroCpf()=" + getNumeroCpf() + ", getNomeMae()=" + getNomeMae() + ", getMediaNota()=" + getMediaNota()
+        + ", getNomeEscola()=" + getNomeEscola() + ", getNumeroCpf()=" + getNumeroCpf() + ", getSerieMatriculada()="
+        + getSerieMatriculada() + ", getNomeMae()=" + getNomeMae() + ", getMediaNota()=" + getMediaNota()
         + ", getNomePai()=" + getNomePai() + ", getClass()=" + getClass() + ", getResultadoFinal()="
-        + getResultadoFinal() + ", pessoaMaiorIdade()=" + pessoaMaiorIdade() + ", materias()="
-        + Arrays.toString(materias()) + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+        + getResultadoFinal() + ", pessoaMaiorIdade()=" + pessoaMaiorIdade() + ", hashCode()=" + hashCode()
+        + ", toString()=" + super.toString() + "]";
   }
 
   @Override
@@ -105,20 +107,8 @@ public class Aluno extends Pessoa {
     return idade >= 21;
   }
 
-  public char[] materias() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'materias'");
-  }
+  
 
-  public void setIdade(Integer valueOf) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'setIdade'");
-  }
-
-  @Override
-  public double salario() {
-    // TODO Auto-generated method stub
-    return 1500.90;
-  }
+  
 
 }

@@ -37,13 +37,13 @@ public class ClasssesFilhasTest  {
 
         System.out.println("----------------------------");
 
-        System.out.println("Seu salário mensal e: " + aluno.salario());
-        System.out.println("Seu salário mensal e: " + diretor.salario());
-        System.out.println("Seu salário mensal e: " + secretario.salario());
-
-       
+        
 
     }
+
+    
+
+   
 
 
 }

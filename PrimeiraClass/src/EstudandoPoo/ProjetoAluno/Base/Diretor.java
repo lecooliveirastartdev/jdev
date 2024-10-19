@@ -25,21 +25,25 @@ public String getTitulacao() {
 public void setTitulacao(String titulacao) {
     this.titulacao = titulacao;
 }
+
+
+
 @Override
 public String toString() {
-    return "Diretor [registroEducacao=" + registroEducacao + ", tempoDirecao=" + tempoDirecao + ", nome=" + nome
-            + ", titulacao=" + titulacao + ", idade=" + idade + ", dataNascimento=" + dataNascimento
+    return "Diretor [registroEducacao=" + registroEducacao + ", tempoDirecao=" + tempoDirecao + ", titulacao="
+            + titulacao + ", nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento
             + ", registroGeral=" + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai="
             + nomePai + ", getRegistroEducacao()=" + getRegistroEducacao() + ", getTempoDirecao()=" + getTempoDirecao()
-            + ", getNome()=" + getNome() + ", getIdade()=" + getIdade() + ", getTitulacao()=" + getTitulacao()
-            + ", getDataNascimento()=" + getDataNascimento() + ", getRegistroGeral()=" + getRegistroGeral()
+            + ", getNome()=" + getNome() + ", getTitulacao()=" + getTitulacao() + ", getDataNascimento()="
+            + getDataNascimento() + ", getIdade()=" + getIdade() + ", getRegistroGeral()=" + getRegistroGeral()
             + ", getNumeroCpf()=" + getNumeroCpf() + ", getNomeMae()=" + getNomeMae() + ", getNomePai()=" + getNomePai()
-            + ", getClass()=" + getClass() + ", toString()=" + super.toString() + ", hashCode()=" + hashCode() + "]";
+            + ", getClass()=" + getClass() + ", pessoaMaiorIdade()=" + pessoaMaiorIdade() + ", hashCode()=" + hashCode()
+            + ", toString()=" + super.toString() + "]";
 }
 @Override
-public double salario() {
+public int getIdade() {
     // TODO Auto-generated method stub
-    return 3900.78;
+    return super.getIdade();
 }
 
 

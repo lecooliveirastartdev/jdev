@@ -23,22 +23,27 @@ public class Secretario extends Pessoa {
     public void setExperiencia(String experiencia) {
         this.experiencia = experiencia;
     }
+    
+    
+    
+
+
     @Override
     public String toString() {
-        return "Secretario [redistro=" + redistro + ", nivelCargo=" + nivelCargo + ", nome=" + nome + ", experiencia="
-                + experiencia + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
+        return "Secretario [redistro=" + redistro + ", nivelCargo=" + nivelCargo + ", experiencia=" + experiencia
+                + ", nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
                 + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
                 + ", getRedistro()=" + getRedistro() + ", getNivelCargo()=" + getNivelCargo() + ", getNome()="
-                + getNome() + ", getIdade()=" + getIdade() + ", getExperiencia()=" + getExperiencia()
-                + ", getDataNascimento()=" + getDataNascimento() + ", getRegistroGeral()=" + getRegistroGeral()
-                + ", getNumeroCpf()=" + getNumeroCpf() + ", getNomeMae()=" + getNomeMae() + ", getNomePai()="
-                + getNomePai() + ", getClass()=" + getClass() + ", toString()=" + super.toString() + ", hashCode()="
-                + hashCode() + "]";
+                + getNome() + ", getExperiencia()=" + getExperiencia() + ", getDataNascimento()=" + getDataNascimento()
+                + ", getIdade()=" + getIdade() + ", getRegistroGeral()=" + getRegistroGeral() + ", getNumeroCpf()="
+                + getNumeroCpf() + ", getNomeMae()=" + getNomeMae() + ", getNomePai()=" + getNomePai() + ", getClass()="
+                + getClass() + ", pessoaMaiorIdade()=" + pessoaMaiorIdade() + ", hashCode()=" + hashCode()
+                + ", toString()=" + super.toString() + "]";
     }
     @Override
-    public double salario() {
+    public int getIdade() {
         // TODO Auto-generated method stub
-        return 1800.80 * 0.9;
+        return super.getIdade();
     }
 
 

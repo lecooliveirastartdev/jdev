@@ -10,7 +10,6 @@ public abstract class Pessoa { /* HERANÇA -> Classe PAI ou classe MASTER  ou SU
     protected String nomeMae;
     protected String nomePai;
 
-    public abstract  double salario();// Método abstrato na calsse PAI e obrigatório para as calsses filhas.
 
     public String getNome() {
         return nome;
