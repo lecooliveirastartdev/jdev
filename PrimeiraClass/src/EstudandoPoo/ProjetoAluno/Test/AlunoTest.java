@@ -3,7 +3,9 @@ package EstudandoPoo.ProjetoAluno.Test;
 import javax.swing.JOptionPane;
 import EstudandoPoo.ProjetoAluno.Base.Aluno;
 import EstudandoPoo.ProjetoAluno.Base.Disciplina;
+import EstudandoPoo.ProjetoAluno.Base.Secretario;
 import EstudandoPoo.ProjetoAluno.Constantes.StatusAluno;
+import EstudandoPoo.ProjetoAluno.Interfaces.PermirtirAcesso;
 
 import java.io.ObjectInputFilter.Status;
 import java.util.ArrayList;
@@ -16,7 +18,10 @@ public class AlunoTest {
         String login = JOptionPane.showInputDialog("Informe a login ");
         String senha = JOptionPane.showInputDialog("Informe a senha ");
 
-        if (login.equalsIgnoreCase(login) && senha.equalsIgnoreCase("admin")) {
+        PermirtirAcesso secretario = new Secretario();
+       
+
+        if (secretario.autenticar(login, senha)) {
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -28,7 +33,7 @@ public class AlunoTest {
                                                                                      * sequencia de valores.
                                                                                      */
 
-            for (int quantidade = 1; quantidade <= 5; quantidade++) {
+            for (int quantidade = 1; quantidade <= 1; quantidade++) {
 
                 String nome = JOptionPane.showInputDialog("Qual o nome do aluno");
                 String idade = JOptionPane.showInputDialog("Qual a sua idade");
@@ -109,6 +114,10 @@ public class AlunoTest {
 
             }
 
+
+        }else {
+
+            JOptionPane.showMessageDialog(null, "Acesso não pemitido");
         }
 
     }

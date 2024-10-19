@@ -1,32 +1,40 @@
 package EstudandoPoo.ProjetoAluno.Base;
 
-public class Secretario extends Pessoa {
+import EstudandoPoo.ProjetoAluno.Interfaces.PermirtirAcesso;
+
+public class Secretario extends Pessoa implements PermirtirAcesso {
 
     private String redistro;
     private String nivelCargo;
     private String experiencia;
+
+    private String login;
+
+    private String senha;
+
     public String getRedistro() {
         return redistro;
     }
+
     public void setRedistro(String redistro) {
         this.redistro = redistro;
     }
+
     public String getNivelCargo() {
         return nivelCargo;
     }
+
     public void setNivelCargo(String nivelCargo) {
         this.nivelCargo = nivelCargo;
     }
+
     public String getExperiencia() {
         return experiencia;
     }
+
     public void setExperiencia(String experiencia) {
         this.experiencia = experiencia;
     }
-    
-    
-    
-
 
     @Override
     public String toString() {
@@ -40,15 +48,19 @@ public class Secretario extends Pessoa {
                 + getClass() + ", pessoaMaiorIdade()=" + pessoaMaiorIdade() + ", hashCode()=" + hashCode()
                 + ", toString()=" + super.toString() + "]";
     }
+
     @Override
     public int getIdade() {
         // TODO Auto-generated method stub
         return super.getIdade();
     }
 
+   
 
-    
-
-    
+    @Override
+    public boolean autenticar(String login, String senha) {
+        // TODO Auto-generated method stub
+        return login.equals("admin") && senha.equals("admin");
+    }
 
 }
