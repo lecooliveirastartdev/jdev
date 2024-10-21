@@ -7,5 +7,7 @@ public interface PermirtirAcesso {
    // Exemplo simplificado -> public boolean autenticar(); // Apenas declaração do método
     public boolean autenticar( String login, String senha);
 
+    public boolean autenticar();
+
     
 }

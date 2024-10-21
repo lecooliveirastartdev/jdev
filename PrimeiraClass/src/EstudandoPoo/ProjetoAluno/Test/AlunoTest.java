@@ -1,11 +1,14 @@
 package EstudandoPoo.ProjetoAluno.Test;
 
 import javax.swing.JOptionPane;
+
+import EstudandoPoo.ProjetoAluno.Auxiliares.FuncaoAutenticacao;
 import EstudandoPoo.ProjetoAluno.Base.Aluno;
 import EstudandoPoo.ProjetoAluno.Base.Disciplina;
 import EstudandoPoo.ProjetoAluno.Base.Secretario;
 import EstudandoPoo.ProjetoAluno.Constantes.StatusAluno;
 import EstudandoPoo.ProjetoAluno.Interfaces.PermirtirAcesso;
+
 
 import java.io.ObjectInputFilter.Status;
 import java.util.ArrayList;
@@ -18,10 +21,10 @@ public class AlunoTest {
         String login = JOptionPane.showInputDialog("Informe a login ");
         String senha = JOptionPane.showInputDialog("Informe a senha ");
 
-        PermirtirAcesso secretario = new Secretario();
-       
 
-        if (secretario.autenticar(login, senha)) {
+        PermirtirAcesso permirtirAcesso = new Secretario(login, senha);
+
+        if ( new FuncaoAutenticacao(new Secretario(login, senha)).autenticar()) {
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -114,8 +117,7 @@ public class AlunoTest {
 
             }
 
-
-        }else {
+        } else {
 
             JOptionPane.showMessageDialog(null, "Acesso não pemitido");
         }
