@@ -16,6 +16,10 @@ public class Secretario extends Pessoa implements PermirtirAcesso {
         //TODO Auto-generated constructor stub
     }
 
+    public Secretario() {
+        //TODO Auto-generated constructor stub
+    }
+
     public String getRedistro() {
         return redistro;
     }
