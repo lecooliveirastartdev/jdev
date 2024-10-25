@@ -22,7 +22,6 @@ public class AlunoTest {
         String senha = JOptionPane.showInputDialog("Informe a senha ");
 
 
-        PermirtirAcesso permirtirAcesso = new Secretario(login, senha);
 
         if ( new FuncaoAutenticacao(new Secretario(login, senha)).autenticar()) {
 
