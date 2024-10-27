@@ -1,8 +1,7 @@
 package EstudandoPoo.ProjetoAluno.Base;
 
-import EstudandoPoo.ProjetoAluno.Interfaces.PermirtirAcesso;
 
-public class Secretario extends Pessoa implements PermirtirAcesso {
+public class Secretario extends Pessoa{
 
     private String redistro;
     private String nivelCargo;
@@ -61,20 +60,6 @@ public class Secretario extends Pessoa implements PermirtirAcesso {
     public int getIdade() {
         // TODO Auto-generated method stub
         return super.getIdade();
-    }
-
-    @Override
-    public boolean autenticar(String login, String senha) {
-        this.login = login;
-        this.senha = senha;
-        return autenticar();
-
-    }
-
-    @Override
-    public boolean autenticar() {
-        // TODO Auto-generated method stub
-        return login.equals("admin") && senha.equals("admin");
     }
 
 }
