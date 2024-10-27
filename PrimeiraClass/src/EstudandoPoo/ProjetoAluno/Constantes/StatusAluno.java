@@ -1,10 +1,5 @@
 package EstudandoPoo.ProjetoAluno.Constantes;
 
-import javax.swing.JOptionPane;
-import EstudandoPoo.ProjetoAluno.Base.Aluno;
-import EstudandoPoo.ProjetoAluno.Base.Disciplina;
-import java.util.ArrayList;
-import java.util.List;
 
 public class StatusAluno {
 

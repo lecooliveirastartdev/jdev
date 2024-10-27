@@ -1,12 +1,9 @@
 package EstudandoPoo.ProjetoAluno.Base;
 
-import javax.swing.JOptionPane;
 import EstudandoPoo.ProjetoAluno.Base.Aluno;
-import EstudandoPoo.ProjetoAluno.Base.Disciplina;
 import EstudandoPoo.ProjetoAluno.Constantes.StatusAluno;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Aluno extends Pessoa {
