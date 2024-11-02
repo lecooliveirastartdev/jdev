@@ -56,7 +56,7 @@ public class Aluno extends Pessoa {
 
     for (Disciplina disciplina : disciplinas) {
 
-      somaNota += disciplina.getNota();
+      somaNota += disciplina.getMediaNotas();
     }
 
     return somaNota / disciplinas.size();// VARRER quantos objetos autõmaticos
