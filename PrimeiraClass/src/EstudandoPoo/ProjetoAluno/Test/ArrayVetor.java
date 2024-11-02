@@ -7,7 +7,7 @@ public class ArrayVetor {
     // Método MEN Usado para executar codigo.
     public static void main(String[] args) {
 
-        /* Arrauy pode ser de todos os tipos de dados e objetos também. */
+        /* Array pode ser de todos os tipos de dados e objetos também. */
 
         String posicoes = JOptionPane.showInputDialog("Quantas posições o Array deve ter?");
 
