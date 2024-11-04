@@ -11,8 +11,7 @@ public class ArrayVetor {
     public static void main(String[] args) {
 
         double[] notas = { 8.8, 9.7, 7.6, 6.8 };
-        double[] notasLogica = {7.1, 10, 8.4, 9.2 };
-
+        double[] notasLogica = { 7.1, 10, 8.4, 9.2 };
 
         // Criação do Aluno
         Aluno aluno = new Aluno();
@@ -32,18 +31,45 @@ public class ArrayVetor {
 
         aluno.getDisciplinas().add(disciplina2);
 
+        System.out.println("Nome : " + aluno.getNome() + " / " + " Inscrito no curso : " + aluno.getNomeEscola());
 
+        for (Disciplina d : aluno.getDisciplinas()) {
 
+            System.out.println("---------- Disciplina do aluno ----------");
+            System.out.println("Disciplina : " + d.getDisciplina());
+            System.out.println("As notas das disciplinas são : ");
 
+            double notaMax = 0.0;
+            double notaMin = 10;
 
+            // Regras de negocio para descobrir a MAIOR e MENOR nota do aluno.
+            for (int pos = 0; pos < d.getNota().length; pos++) {
 
+                System.out.println("Nota  " + pos + " E igual = " + d.getNota()[pos]);
 
+                if (pos == 0) {
 
+                    notaMax = d.getNota()[pos];
 
+                } else {
+                    if (d.getNota()[pos] > notaMax) {
+                        notaMax = d.getNota()[pos];
+                    }
+                }
 
+                if (pos == 0) {
 
+                    notaMin = d.getNota()[pos];
+                } else {
+                    if (d.getNota()[pos] < notaMin)
+                        notaMin = d.getNota()[pos];
 
-        
+                }
+
+            }
+            System.out.println("A maior nota da disciplina = " + d.getDisciplina() + " e de valor : " + notaMax);
+            System.out.println("A menor nota da disciplina = " + d.getDisciplina() + " e de valor : " + notaMin);
+        }
 
         /*
          * Array pode ser de todos os tipos de dados e objetos também.
