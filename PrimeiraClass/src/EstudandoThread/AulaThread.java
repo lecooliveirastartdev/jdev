@@ -28,7 +28,7 @@ public class AulaThread {
             /* Codigo da rotina */
         }.start(); /* Liga a Tread que fica processando paralelamente */
 
-        /* Codigo do sistema do usuário continua fluxo de trabalho */
+        /* Codigo do sistema do usuário continua fluxo de trabalho (voltei) */
         System.out.println("---------------- Thread em segundo plano --------------------------------");
         /* Fluxo do sistema */
         JOptionPane.showMessageDialog(null, "Sistema continua executando para o usuário");
